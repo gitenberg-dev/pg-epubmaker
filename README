@@ -1,0 +1,21 @@
+=========
+EpubMaker
+=========
+
+EpubMaker is the tool used for format conversion at Project Gutenberg.
+It builds EPUB2 and Kindle files from HTML.
+Also it builds HTML4, EPUB2, Kindle, and PDF files from reST sources.
+
+
+Prerequisites
+=============
+
+* Python >= 2.6,
+
+* HTMLTidy, 
+
+* Kindlegen, 
+
+* TexLive, and
+
+* groff.

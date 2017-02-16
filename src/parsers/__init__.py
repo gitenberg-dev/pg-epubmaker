@@ -408,12 +408,6 @@ class HTMLParserBase (ParserBase):
 
         """
         
-        for link in xpath (xhtml, '//xhtml:a[@href]'):
-            href = urlparse.urldefrag (link.get ('href'))[0]
-            if href not in manifest:
-                debug ("strip_links: Deleting <a> to %s not in manifest." % href)
-                del link.attrib['href']
-
         for link in xpath (xhtml, '//xhtml:link[@href]'):
             href = link.get ('href')
             if href not in manifest:

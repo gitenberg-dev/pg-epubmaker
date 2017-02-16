@@ -1,0 +1,22 @@
+# ignore the local copy of any logs
+logs/*
+
+# python ignores
+*.pyc
+*.db
+*.coverage
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints/*
+
+# Python packaging
+.eggs*
+.env
+.tox*
+build*
+dist*
+gitberg.egg-info
+xgitberg.egg-info
+log/log.txt
+*.log
+
+

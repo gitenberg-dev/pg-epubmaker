@@ -11,7 +11,7 @@ package_dir = {
 requires = [
     'setuptools',
     'roman',
-    'docutils (>= 0.8.1)',
+    'docutils (>= 0.8.1, <0.13)',
     'lxml (>= 2.3)',
     'cssutils (>= 0.9.8a1)',
     'PIL (>= 1.1.7)',

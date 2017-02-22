@@ -2,20 +2,20 @@
 # epubmaker common setup all flavors
 #
 
-VERSION = '0.3.20'
+VERSION = '0.3.21'
 
 package_dir = {
     'epubmaker': 'src',
     }
 
-requires = [
-    'setuptools',
+install_requires = [
     'roman',
-    'docutils (>= 0.8.1, <0.13)',
-    'lxml (>= 2.3)',
-    'cssutils (>= 0.9.8a1)',
-    'PIL (>= 1.1.7)',
+    'docutils >= 0.8.1, <0.13',
+    'lxml >= 2.3',
+    'cssutils >= 0.9.8a1',
+    'pillow',
     ]
+
 
 pypi_packages = [
     'epubmaker.parsers',

@@ -876,22 +876,6 @@ class Writer (writers.HTMLishWriter):
                 raise
         
         
-    @staticmethod
-    def strip_links (xhtml, manifest):
-        """ Strip all links to images.
-
-        This does not strip inline images, only images that are
-        targets of links. EPUB does not allow that.
-
-        """
-
-        for link in xpath (xhtml, '//xhtml:a[@href]'):
-            href = urlparse.urldefrag (link.get ('href'))[0]
-            if not manifest[href] in OPS_CONTENT_DOCUMENTS:
-                debug ("strip_links: Deleting <a> to non-ops-document-type: %s" % href)
-                del link.attrib['href']
-                continue
-
                 
     @staticmethod
     def strip_ins (xhtml):
@@ -1240,7 +1224,6 @@ class Writer (writers.HTMLishWriter):
 
                     # strip all links to items not in manifest
                     p.strip_links (xhtml, self.spider.dict_urls_mediatypes ())
-                    self.strip_links (xhtml, self.spider.dict_urls_mediatypes ())
 
                     # FIXME: remove strip_ins when epubcheck is fixed
                     # epubcheck 1.0.4 is broken

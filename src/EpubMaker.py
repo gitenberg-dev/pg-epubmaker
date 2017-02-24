@@ -204,6 +204,12 @@ def main ():
         default = False,
         help    = "get mediatype from url extension instead of http response")
 
+    op.add_option (
+        "--cover",
+        dest    = "coverpage_url",
+        default = None,
+        help    = "add the specified cover to the epub")
+
     options, args = CommonOptions.parse_args (op, {}, {
         'proxies': None,
         'bibrec': 'http://www.gutenberg.org/ebooks/',
@@ -264,7 +270,7 @@ def main ():
 
         options.include_mediatypes = options.include_mediatypes_argument[:]
         options.want_images = False
-        options.coverpage_url = None
+        #options.coverpage_url = None
 
         parser = ParserFactory.ParserFactory.create (options.candidate.filename, {})
 

@@ -2,16 +2,14 @@
 # pypi epubmaker setup
 #
 
-from distutils.core import setup
+from setuptools import setup
 from setup_inc import *
 
 setup (
     name = 'epubmaker',
     version = VERSION,
+    install_requires = install_requires,
     package_dir  = package_dir,
-
-    requires     = requires,
-
     packages     = pypi_packages,
     py_modules   = pypi_py_modules,
     package_data = pypi_package_data,

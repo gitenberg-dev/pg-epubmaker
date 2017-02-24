@@ -676,9 +676,17 @@ class ContentOPF (object):
 
         # else use default cover page image
         if id_ is None:
-            url = 'cover.jpg'
-            mediatype = mt.jpeg
-            ocf.add_bytes (url, resource_string ('epubmaker.writers', url), mediatype)
+            ext = url.split('.')[-1]
+            try:
+                mediatype = getattr(mt, ext)
+            except AttributeError:
+                mediatype = mt.jpeg
+            try:
+                with open(url, 'r') as f:
+                    ocf.add_bytes (Writer.url2filename (url), f.read(), mediatype)
+            except IOError:
+                url = 'cover.jpg'
+                ocf.add_bytes (url, resource_string ('epubmaker.writers', url), mediatype)
             id_ = self.manifest_item (url, mediatype)
 
         debug ("Adding coverpage id: %s url: %s" % (id_, url))

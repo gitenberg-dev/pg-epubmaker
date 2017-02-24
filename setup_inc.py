@@ -95,7 +95,7 @@ description = "The Project Gutenberg tool to generate EPUBs and other ebook form
 long_description = open ('README').read ()
 license = "GPL v3"
 keywords = "ebook epub kindle pdf rst reST reStructuredText project gutenberg format conversion"
-url = "http://pypi.python.org/pypi/epubmaker/"
+url = "https://github.com/gitenberg-dev/pg-epubmaker"
 
 classifiers = [
     "Topic :: Text Processing",

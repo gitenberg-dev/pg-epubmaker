@@ -1,8 +1,8 @@
 Metadata-Version: 1.1
 Name: epubmaker
-Version: 0.3.20
+Version: 0.3.21
 Summary: The Project Gutenberg tool to generate EPUBs and other ebook formats.
-Home-page: http://pypi.python.org/pypi/epubmaker/
+Home-page: https://github.com/gitenberg-dev/pg-epubmaker
 Author: Marcello Perathoner
 Author-email: webmaster@gutenberg.org
 License: GPL v3
@@ -38,7 +38,7 @@ Classifier: Intended Audience :: Other Audience
 Classifier: Development Status :: 4 - Beta
 Requires: setuptools
 Requires: roman
-Requires: docutils (>= 0.8.1)
+Requires: docutils (>= 0.8.1, < 0.13)
 Requires: lxml (>= 2.3)
 Requires: cssutils (>= 0.9.8a1)
 Requires: PIL (>= 1.1.7)

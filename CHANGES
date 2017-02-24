@@ -1,3 +1,10 @@
+0.3.21
+
+Add parameter to add and set the cover image.
+Switch setup to setuptools to better manage dependencies, because docutils 0.13 breaks epubmaker.
+No longer strip hyperlinks to external resources.
+
+
 0.3.20
 
 Do not make special kindlegen epub anymore. Requires kindlegen 2.7+.

@@ -670,7 +670,7 @@ class Parser (HTMLParserBase):
             for par in self.pars:
                 p = etree.fromstring (
                     self.ship_out (par),
-                    lxml.html.XHTMLParser (encoding = 'unicode'))
+                    lxml.html.XHTMLParser (encoding = 'utf-8'))
                 p.tail = '\n\n'
                 body.append (p)
 

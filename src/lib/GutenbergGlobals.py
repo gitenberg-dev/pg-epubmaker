@@ -148,7 +148,7 @@ XHTML_RDFa_DOCTYPE = ("<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML+RDFa 1.0//EN' " 
 NCX_DOCTYPE = ("<!DOCTYPE ncx PUBLIC '-//NISO//DTD ncx 2005-1//EN' " +
                "'http://www.daisy.org/z3986/2005/ncx-2005-1.dtd'>")
 
-GENERATOR = 'EpubMaker 0.3 by Marcello Perathoner <webmaster@gutenberg.org>'
+GENERATOR = 'EpubMaker by Marcello Perathoner <https://github.com/gitenberg-dev/pg-epubmaker>'
 
 
 def xmlspecialchars (s):

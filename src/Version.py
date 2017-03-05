@@ -1,2 +1,2 @@
-VERSION = '0.3.20'
-GENERATOR = 'EpubMaker %s by Marcello Perathoner <webmaster@gutenberg.org>'
+VERSION = '0.3.21'
+GENERATOR = 'EpubMaker %s <https://github.com/gitenberg-dev/pg-epubmaker>'

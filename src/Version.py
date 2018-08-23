@@ -1,2 +1,2 @@
-VERSION = '0.3.21'
+VERSION = '0.3.22'
 GENERATOR = 'EpubMaker %s <https://github.com/gitenberg-dev/pg-epubmaker>'

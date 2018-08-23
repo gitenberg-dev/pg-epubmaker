@@ -1251,7 +1251,7 @@ class Writer (writers.HTMLishWriter):
                     chunker.split (xhtml, p.url)
 
             for p in self.spider.parsers:
-                if hasattr (p, 'sheet'):
+                if hasattr (p, 'sheet') and p.sheet:
                     self.fix_css (p.sheet)
                     p.rewrite_links (self.url2filename)
                     parsers.append (p)

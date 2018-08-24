@@ -21,7 +21,7 @@ import fnmatch
 from epubmaker.lib import MediaTypes
 import epubmaker.lib.GutenbergGlobals as gg
 from epubmaker.lib.GutenbergGlobals import NS
-from epubmaker.lib.Logger import debug
+from epubmaker.lib.Logger import debug, error
 
 from epubmaker import ParserFactory
 
@@ -211,10 +211,13 @@ class Spider (object):
         
         if not self.options.max_depth or depth < self.options.max_depth:
             if self.is_included (url):
-                parser = ParserFactory.ParserFactory.create (url, attribs)
-                self.add_redirection (parser)
-                if self.is_wanted_doc (parser):
-                    self.enqueue (parser.url, depth, attribs)
+                try:
+                    parser = ParserFactory.ParserFactory.create (url, attribs)
+                    self.add_redirection (parser)
+                    if self.is_wanted_doc (parser):
+                        self.enqueue (parser.url, depth, attribs)
+                except IOError:
+                    error ("bad url: %s" % url)
 
 
     def is_included (self, url):
@@ -224,7 +227,7 @@ class Spider (object):
         excluded = any (map (lambda x: fnmatch.fnmatchcase (url, x), self.options.exclude))
 
         if included and not excluded:
-            return 1
+            return 1 if url.startswith('file:') else 0 
 
         if excluded:
             debug ("Dropping excluded %s" % url)

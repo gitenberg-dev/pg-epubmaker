@@ -1254,7 +1254,7 @@ class Writer (writers.HTMLishWriter):
                 if hasattr (p, 'sheet') and p.sheet:
                     self.fix_css (p.sheet)
                     p.rewrite_links (self.url2filename)
-                    parsers.append (p)
+                parsers.append (p)
                         
             # after splitting html into chunks we have to rewrite all
             # internal links in HTML

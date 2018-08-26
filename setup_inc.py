@@ -2,10 +2,10 @@
 # epubmaker common setup all flavors
 #
 
-VERSION = '0.3.22'
+VERSION = '0.3.23'
 
 package_dir = {
-    'epubmaker': 'src',
+    'epubmaker': 'epubmaker',
     }
 
 install_requires = [

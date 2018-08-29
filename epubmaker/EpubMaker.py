@@ -114,6 +114,13 @@ def main ():
         help    = "go how many levels deep while recursively retrieving pages. (0 == infinite)")
 
     op.add_option (
+        "--local-only",
+        dest    = "local_files_only",
+        action  = "store_true",
+        default = False,
+        help    = "restrict recursive search to local files")
+
+    op.add_option (
         "--include",
         metavar = "GLOB",
         dest    = "include_argument", 

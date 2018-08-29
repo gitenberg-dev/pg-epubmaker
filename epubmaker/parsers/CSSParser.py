@@ -46,7 +46,10 @@ class Parser (ParserBase):
             return
         
         parser = cssutils.CSSParser ()
-        self.sheet = parser.parseUrl (self.url)
+        if self.fp:
+            self.sheet = parser.parseString (self.bytes_content (), encoding = self.encoding)
+        else:
+            self.sheet = parser.parseUrl (self.url)
 
         self.mediatype = 'text/css'
         self.unpack_media_handheld (self.sheet)

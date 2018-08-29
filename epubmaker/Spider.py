@@ -227,7 +227,12 @@ class Spider (object):
         excluded = any (map (lambda x: fnmatch.fnmatchcase (url, x), self.options.exclude))
 
         if included and not excluded:
-            return 1 if url.startswith('file:') else 0 
+            if self.options.local_files_only:
+                if url.startswith('http:') or url.startswith('https:'):
+                    return 0
+                else:
+                    return 1 
+            return 1
 
         if excluded:
             debug ("Dropping excluded %s" % url)

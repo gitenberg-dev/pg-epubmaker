@@ -1251,10 +1251,11 @@ class Writer (writers.HTMLishWriter):
                     chunker.split (xhtml, p.url)
 
             for p in self.spider.parsers:
-                if hasattr (p, 'sheet') and p.sheet:
+                if p.mediatype == 'text/css':
+                    p.parse()
                     self.fix_css (p.sheet)
                     p.rewrite_links (self.url2filename)
-                parsers.append (p)
+                    parsers.append (p)
                         
             # after splitting html into chunks we have to rewrite all
             # internal links in HTML

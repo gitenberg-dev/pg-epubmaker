@@ -18,6 +18,9 @@ import subprocess
 from epubmaker.lib.Logger import info, debug, warn, error
 from epubmaker.lib.GutenbergGlobals import SkipOutputFormat
 from epubmaker.writers import EpubWriter
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 
 class Writer (EpubWriter.Writer):

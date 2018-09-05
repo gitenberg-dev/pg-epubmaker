@@ -26,6 +26,9 @@ from epubmaker.lib.GutenbergGlobals import xpath
 from epubmaker.lib.Logger import info, debug, error, exception
 
 from epubmaker import writers
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 
 class Writer (writers.HTMLishWriter):

@@ -23,6 +23,9 @@ from epubmaker.lib.GutenbergGlobals import SkipOutputFormat
 
 from epubmaker import ParserFactory
 from epubmaker import writers
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 # map some not-widely-supported characters to more common ones
 u2u = {

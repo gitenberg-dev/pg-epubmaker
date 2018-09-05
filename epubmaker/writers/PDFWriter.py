@@ -22,6 +22,9 @@ from epubmaker.lib.GutenbergGlobals import SkipOutputFormat
 
 from epubmaker import ParserFactory
 from epubmaker import writers
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 class Writer (writers.BaseWriter):
     """ Class to write PDF. """

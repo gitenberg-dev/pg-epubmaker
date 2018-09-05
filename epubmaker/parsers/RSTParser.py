@@ -42,6 +42,9 @@ from epubmaker.mydocutils.writers import xhtml1, epub2, xetex
 
 from epubmaker.mydocutils.gutenberg import parsers as gutenberg_parsers
 from epubmaker.mydocutils.gutenberg.writers import nroff as gutenberg_nroff
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 mediatypes = (mt.rst, )
 

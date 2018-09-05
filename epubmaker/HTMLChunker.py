@@ -26,7 +26,9 @@ from lxml import etree
 import epubmaker.lib.GutenbergGlobals as gg
 from epubmaker.lib.GutenbergGlobals import NS
 from epubmaker.lib.Logger import debug, error
+from epubmaker.CommonOptions import Options
 
+options = Options()
 # MAX_CHUNK_SIZE  = 300 * 1024  # bytes
 MAX_CHUNK_SIZE  = 100 * 1024  # bytes
 

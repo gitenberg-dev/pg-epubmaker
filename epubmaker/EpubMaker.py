@@ -35,6 +35,8 @@ from epubmaker import CommonOptions
 
 from epubmaker.Version import VERSION
 
+options = CommonOptions.Options()
+
 def null_translation (s):
     """ Translate into same language. :-) """
     return s
@@ -228,10 +230,6 @@ def main ():
 
     if not args:
         op.error ("please specify which file to convert")
-
-    import __builtin__
-    __builtin__.options = options
-    __builtin__._ = null_translation
 
     Logger.set_log_level (options.verbose)        
 

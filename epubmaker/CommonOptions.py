@@ -22,6 +22,18 @@ import os
 class Struct (object):
     pass
 
+# options is a "Borg" set by optparse (note that it's not thread-safe)
+class Options:
+    __shared_state = {}
+    def __init__(self):
+        self.__dict__ = self.__shared_state
+        
+    def update(self, _dict):
+        self.__dict__.update(_dict)
+
+options = Options()
+
+
 def add_common_options (op):
     """ Add options common to all programs. """
     
@@ -61,8 +73,9 @@ def get_parser (**kwargs):
     
 
 def parse_args (op, params = {}, defaults = {}):
-    (options, args) = op.parse_args ()
-
+    (parsed_options, args) = op.parse_args ()
+    options.update(vars(parsed_options))
+    
     cp = ConfigParser.SafeConfigParser (params)
     cp.read ( [options.config_name,
                os.path.expanduser ('~/.epubmaker.conf'),

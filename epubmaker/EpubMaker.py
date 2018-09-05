@@ -35,6 +35,8 @@ from epubmaker import CommonOptions
 
 from epubmaker.Version import VERSION
 
+options = CommonOptions.Options()
+
 def null_translation (s):
     """ Translate into same language. :-) """
     return s
@@ -229,10 +231,6 @@ def main ():
     if not args:
         op.error ("please specify which file to convert")
 
-    import __builtin__
-    __builtin__.options = options
-    __builtin__._ = null_translation
-
     Logger.set_log_level (options.verbose)        
 
     options.types = options.types or ['all']
@@ -266,7 +264,10 @@ def main ():
         if options.include_argument:
             options.include = options.include_argument[:]
         else:
-            options.include = [ os.path.dirname (url) + '/*' ]
+            exclude_patt = os.path.dirname (url) + '/*'
+            options.include = [ exclude_patt ]
+            if exclude_patt.startswith ('/'):
+                options.include.append('file://' + exclude_patt)
             
         # try to get metadata
 

@@ -22,6 +22,9 @@ from epubmaker.mydocutils import broken
 from epubmaker.lib.Logger import debug, error
 from epubmaker.lib.MediaTypes import mediatypes
 from epubmaker.Version import VERSION
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 class AppURLopener (urllib.FancyURLopener):
     version = "ebookmaker/%s" % VERSION

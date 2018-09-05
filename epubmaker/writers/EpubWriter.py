@@ -39,6 +39,7 @@ from epubmaker import Spider
 from epubmaker import parsers
 from epubmaker import writers
 from epubmaker.Version import VERSION, GENERATOR
+from epubmaker.CommonOptions import Options
 
 # pylint: disable=W0142
 
@@ -156,6 +157,7 @@ IMAGE_WRAPPER = """<?xml version="1.0"?>
   </body>
 </html>"""
 
+options = Options()
 
 class OEBPSContainer (zipfile.ZipFile):
     """ Class representing an OEBPS Container. """

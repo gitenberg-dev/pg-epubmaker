@@ -23,6 +23,9 @@ from epubmaker.lib.MediaTypes import mediatypes as mt
 
 from epubmaker import parsers
 from epubmaker.parsers import HTMLParserBase
+from epubmaker.CommonOptions import Options
+
+options = Options()
 
 mediatypes = (mt.txt, )
 

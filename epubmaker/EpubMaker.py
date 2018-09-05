@@ -266,7 +266,10 @@ def main ():
         if options.include_argument:
             options.include = options.include_argument[:]
         else:
-            options.include = [ os.path.dirname (url) + '/*' ]
+            exclude_patt = os.path.dirname (url) + '/*'
+            options.include = [ exclude_patt ]
+            if exclude_patt.startswith ('/'):
+                options.include.append('file://' + exclude_patt)
             
         # try to get metadata
 

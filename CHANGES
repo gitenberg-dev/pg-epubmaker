@@ -1,3 +1,14 @@
+0.3.25
+
+Don't fail on <img> with bad src
+Use a borg class to effect an options global instead of patching builtins
+Don't disable translations
+Add --local-only option so that using depth>1 can be used for multi-file books
+Running the code from source didn't work with the out of date practice of not using package name for directory name.
+fix bug for no stylesheet
+utf-8 is the encoding, not unicode
+update contact info
+
 0.3.21
 
 Add parameter to add and set the cover image.

@@ -194,12 +194,13 @@ class Spider (object):
         'included' directories.
 
         """
-        
-        parser = ParserFactory.ParserFactory.create (url, attribs)
-        self.add_redirection (parser)
-        if self.is_wanted_aux (parser):
-            self.enqueue (parser.url, depth, attribs)
-
+        try:
+            parser = ParserFactory.ParserFactory.create (url, attribs)
+            self.add_redirection (parser)
+            if self.is_wanted_aux (parser):
+                self.enqueue (parser.url, depth, attribs)
+        except IOError:
+            error ("bad aux url: %s" % url)
 
     def enqueue_doc (self, url, depth, attribs):
         """ Enqueue a document file.

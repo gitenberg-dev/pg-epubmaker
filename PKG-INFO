@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: epubmaker
-Version: 0.3.21
+Version: 0.3.25
 Summary: The Project Gutenberg tool to generate EPUBs and other ebook formats.
 Home-page: https://github.com/gitenberg-dev/pg-epubmaker
 Author: Marcello Perathoner

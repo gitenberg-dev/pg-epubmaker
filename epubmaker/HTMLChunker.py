@@ -236,7 +236,9 @@ class HTMLChunker (object):
             # chunk['name'] = f (chunk['name'])
             
             for link in xpath (chunk['chunk'], '//xhtml:*[@href]'):
-                link.set ('href', f (link.get ('href')))
+                url = link.get ('href')
+                if not url.startswith('http://') and not url.startswith('https://'):
+                    link.set ('href', f (url))
 
             for image in xpath (chunk['chunk'], '//xhtml:*[@src]'):
                 image.set ('src', f (image.get ('src')))

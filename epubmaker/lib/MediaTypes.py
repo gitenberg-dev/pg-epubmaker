@@ -40,6 +40,9 @@ mimetypes.types_map['.rst']     = 'text/x-rst'
 mimetypes.types_map['.png']     = 'image/png'  # Windows XP thinks this is image/x-png
 mimetypes.types_map['.jpg']     = 'image/jpeg' # Windows XP thinks this is image/pjpeg
 mimetypes.types_map['.jpeg']    = 'image/jpeg' # Windows XP thinks this is image/pjpeg
+mimetypes.types_map['.mscz']    = 'application/x-musescore+xml'
+mimetypes.types_map['.mid']     = 'audio/midi'
+mimetypes.types_map['.midi']     = 'audio/midi'
 
 TEXT_MEDIATYPES = set ( (
     'application/xhtml+xml',

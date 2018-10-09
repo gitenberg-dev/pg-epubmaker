@@ -1,4 +1,9 @@
-0.3.25
+0.3.26 October 8, 2018
+
+Don't fail on audio links
+Don't unescape external hrefs
+
+0.3.25 September 20, 2018
 
 Don't fail on <img> with bad src
 Use a borg class to effect an options global instead of patching builtins
@@ -9,7 +14,7 @@ fix bug for no stylesheet
 utf-8 is the encoding, not unicode
 update contact info
 
-0.3.21
+0.3.21 February 24, 2017
 
 Add parameter to add and set the cover image.
 Switch setup to setuptools to better manage dependencies, because docutils 0.13 breaks epubmaker.

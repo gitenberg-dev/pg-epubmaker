@@ -43,6 +43,8 @@ mimetypes.types_map['.jpeg']    = 'image/jpeg' # Windows XP thinks this is image
 mimetypes.types_map['.mscz']    = 'application/x-musescore+xml'
 mimetypes.types_map['.mid']     = 'audio/midi'
 mimetypes.types_map['.midi']     = 'audio/midi'
+mimetypes.types_map['.mus']     = 'application/x-myriad-music'
+
 
 TEXT_MEDIATYPES = set ( (
     'application/xhtml+xml',

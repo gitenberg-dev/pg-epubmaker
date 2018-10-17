@@ -44,6 +44,7 @@ mimetypes.types_map['.mscz']    = 'application/x-musescore+xml'
 mimetypes.types_map['.mid']     = 'audio/midi'
 mimetypes.types_map['.midi']     = 'audio/midi'
 mimetypes.types_map['.mus']     = 'application/x-myriad-music'
+mimetypes.types_map['.sib']     = 'application/x-sibelius-score'
 
 
 TEXT_MEDIATYPES = set ( (

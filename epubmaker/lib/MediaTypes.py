@@ -40,11 +40,14 @@ mimetypes.types_map['.rst']     = 'text/x-rst'
 mimetypes.types_map['.png']     = 'image/png'  # Windows XP thinks this is image/x-png
 mimetypes.types_map['.jpg']     = 'image/jpeg' # Windows XP thinks this is image/pjpeg
 mimetypes.types_map['.jpeg']    = 'image/jpeg' # Windows XP thinks this is image/pjpeg
+mimetypes.types_map['.jfif']    = 'image/jpeg' 
 mimetypes.types_map['.mscz']    = 'application/x-musescore+xml'
 mimetypes.types_map['.mid']     = 'audio/midi'
-mimetypes.types_map['.midi']     = 'audio/midi'
+mimetypes.types_map['.midi']    = 'audio/midi'
 mimetypes.types_map['.mus']     = 'application/x-myriad-music'
 mimetypes.types_map['.sib']     = 'application/x-sibelius-score'
+mimetypes.types_map['.mxl']     = 'application/vnd.recordare.musicxml'
+mimetypes.types_map['.mp3']     = 'audio/mpeg'
 
 
 TEXT_MEDIATYPES = set ( (
